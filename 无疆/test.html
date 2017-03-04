@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		height: 100%;
+	}
+		.test{
+			width: 100%;
+			height: 1000px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="test">
+	</div>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script>
+		jQuery(function($) {
+		    	$(".test").bind('mousewheel', function(event, delta) { 
+	    		if (delta == -1 ) {
+	        			alert("m");
+	        		}else{   
+	        			alert("dd");
+		        		}
+				});
+		    	/*$('.test').bind('mousewheel', function(event, delta, deltaX, deltaY) {
+				    if (window.console && console.log) {
+				         console.log(delta, deltaX, deltaY);
+				    }
+				});*/
+		});
+	</script>
+</body>
+</html>
